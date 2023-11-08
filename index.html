@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: #0F0;
+            font-family: monospace;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            border-top: 2px solid white;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="https://drive.google.com/drive/u/1/folders/1qlhyP9fyf11kCxkc_S7zq7qPsjcMAwtm">UnBlocked Games</a>
+
+    <div class="button-container"><a href="https://proxysurf.glitch.me/">Free Proxy List</a> </div>
+    </div>
+    <div class="container" align="center">
+        <div id="animationText">
+            <span id="prompt">root@user:~$ </span><span id="command"></span>
+        </div>
+    </div>
+
+    <script>
+        const textArray = "Welcome To My Page...";
+        let index = 0;
+        const speed = 100;
+
+        function typeCommand() {
+            const commandElement = document.getElementById('command');
+            if (index < textArray.length) {
+                commandElement.textContent += textArray.charAt(index);
+                index++;
+                setTimeout(typeCommand, speed);
+            }
+        }
+
+        function startAnimation() {
+            setTimeout(typeCommand, 3000);
+        }
+
+        startAnimation();
+    </script>
+</body>
+</html>
