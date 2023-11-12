@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #222;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 80px;
+  min-height: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: width 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar.active {
+  width: 200px;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: transform 0.3s; /* Dönüşüm için animasyon ekledik */
+}
+
+.toggle-btn.active {
+  transform: rotate(180deg); /* Açık durumda düğmeyi 90 derece döndürür */
+}
+
+.menu {
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+
+.menu.active {
+  max-height: 200px;
+}
+
+.menu button {
+  width: 100%;
+  padding: 10px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu button:hover {
+  background-color: #777;
+}
+
+.sub-menu {
+  padding-left: 20px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s;
+}
+
+.sub-menu.active {
+  max-height: 100px;
+}
+
+.content-container {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.content-title {
+  background-color: #ffcc00;
+  padding: 10px;
+  color: #222;
+}
+
+.description {
+  background-color: #66ccff;
+  padding: 10px;
+  line-height: 1.5;
+  color: #222;
+}

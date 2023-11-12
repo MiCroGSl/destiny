@@ -1,87 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destiny</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        #container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #box {
-            width: 300px;
-            height: 400px;
-            background-color: black;
-            border: 2px solid white;
-            overflow: hidden;
-            position: relative;
-        }
-
-        #buttons {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            bottom: 0;
-            transition: transform 0.5s ease;
-        }
-
-        .button {
-            padding: 15px;
-            text-align: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: white;
-            color: black;
-        }
-
-        #audioPlayer {
-            width: 300px;
-            margin-top: 20px;
-        }
-
-        #audioPlayer audio {
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Panel Örneği</title>
 </head>
 <body>
-  <h1 align="center">Welcome To My Page</h1>
-    <div id="container">
-        <div id="box">
-          <p align="center">My Theme:</p>
-            <div id="buttons">
-                <div class="button"><a href="https://drive.google.com/drive/u/1/folders/1qlhyP9fyf11kCxkc_S7zq7qPsjcMAwtm"><font color="red">UnBlocked Games</font></a></div>
-                <div class="button"><a href="https://proxysurf.glitch.me/"><font color="red">Proxy List</font></a></div>
-            </div>
 
-            <div id="audioPlayer">
+  <div class="container">
+    <div class="sidebar">
+      <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+      <div class="menu">
+        <button onclick="showPage('AnaSayfa')">AnaSayfa</button>
+        <button onclick="toggleSubMenu('Araclar')">Araçlar <span id="AraclarIcon">►</span></button>
+        <div class="sub-menu" id="AraclarSubMenu">
+          <button onclick="redirectToURL('https://drive.google.com/drive/u/0/folders/1qlhyP9fyf11kCxkc_S7zq7qPsjcMAwtm')">  UnBlocked Games </button> 
+          <button onclick="redirectToURL('https://proxysurf.glitch.me/')"> Proxy List </button>
+          <button onclick="location.href='web'"> Internet Archive </button>
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <div class="content-container">
+      <div class="header">
+        <h1 class="content-title" align="center">Sayfaya Hoşgeldiniz...</h1>
+      </div>
+      <div class="description">
+        <h2 id="contentDescription" class="content-text">Bizler İnternet Özgürlüğüyüz. Sansüre karşıyız.</h2>
+
+        <h3>Temamız:</h3>
+
+        <div id="audioPlayer">
               <audio controls>
                   
                   <source src="Zodia.mp3" type="audio/mp3">
                   Your browser does not support the audio element.
               </audio>
         </div>
-    </div>
 
-    
+        <h3>Site kaynak kod: https://github.com/MiCroGSl/destiny</h3>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

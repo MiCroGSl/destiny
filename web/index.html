@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Panel Örneği</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+      <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+      <div class="menu">
+        <button onclick="location.href='../'">AnaSayfa</button>
+        <button onclick="toggleSubMenu('Araclar')">Araçlar <span id="AraclarIcon">►</span></button>
+        <div class="sub-menu" id="AraclarSubMenu">
+          <button onclick="redirectToURL('https://drive.google.com/drive/u/0/folders/1qlhyP9fyf11kCxkc_S7zq7qPsjcMAwtm')">  UnBlocked Games </button> 
+          <button onclick="redirectToURL('https://proxysurf.glitch.me/')"> Proxy List </button>
+          <button onclick="location.href='web'"> Internet Archive </button>
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <div class="content-container">
+      <div class="header">
+        <h1 class="content-title" align="center">Internet Archive</h1>
+      </div>
+      <div class="description">
+        <h2 id="contentDescription" class="content-text">Sansür/Engel yüzünden bazı uygulama/sayfa vs. erişim olmayabilir,</h2>
+        <h2>Bu yüzden bu sayfa bize yardımcı oluyor. Engeli olucağını sanmıyorum.</h2>
+
+        <br>
+
+        <h3>Site:</h3>
+        <h3><link>https://archive.org/</link></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
